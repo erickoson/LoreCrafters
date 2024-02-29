@@ -1,0 +1,17 @@
+/* En tu archivo GameInfo.css */
+.game-info {
+    border: 1px solid #ccc;
+    padding: 16px;
+    margin: 16px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .game-info h2 {
+    color: #333;
+  }
+  
+  .game-info p {
+    color: #666;
+  }
+  
