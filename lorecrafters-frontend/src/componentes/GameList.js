@@ -2,6 +2,11 @@ import React from 'react';
 import GameInfo from './GameInfo';
 
 const GameList = ({ games }) => {
+  // Verificar si "games" es undefined o null
+  if (!games) {
+    return <div>No hay juegos disponibles.</div>;
+  }
+
   return (
     <div>
       {games.map((game) => (
@@ -12,3 +17,4 @@ const GameList = ({ games }) => {
 };
 
 export default GameList;
+

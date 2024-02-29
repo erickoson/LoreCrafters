@@ -1,38 +1,29 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+// Importa los componentes necesarios de react-router-dom
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+// Importa tus componentes de las rutas
 import Navbar from './componentes/Navbar';
 import Footer from './componentes/Footer';
 import GameList from './componentes/GameList';
 import Contact from './componentes/Contact';
 
-
-const games = [
-  { id: 1, title: 'Game 1', description: 'Description for Game 1' },
-  { id: 2, title: 'Game 2', description: 'Description for Game 2' },
-  // Add more games as needed
-];
-
-const App = () => {
+// Define tus rutas usando el componente Routes
+function App() {
   return (
     <Router>
+      {/* Navbar siempre presente */}
       <Navbar />
-      <Switch>
-        <Route path="/" exact>
-          <h1>Welcome to LoreCrafters</h1>
-        </Route>
-        <Route path="/games">
-          <GameList games={games} />
-        </Route>
-        <Route path="/contact">
-          <Contact />
-        </Route>
-        <Route path="/dev">
-          {/* Components in different states */}
-        </Route>
-      </Switch>
+
+      {/* Define tus rutas con el componente Routes */}
+      <Routes>
+        <Route path="/" element={<GameList />} />
+        <Route path="/contacto" element={<Contact />} />
+      </Routes>
+
+      {/* Footer siempre presente */}
       <Footer />
     </Router>
   );
-};
+}
 
 export default App;

@@ -1,13 +1,18 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';  // Asegúrate de que la ruta sea correcta
+import { createRoot } from 'react-dom/client';
+import App from './App';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const root = document.getElementById('root');
 
-reportWebVitals();
+const renderApp = () => {
+  createRoot(root).render(<App />);
+};
 
+renderApp();
+
+// Si deseas conservar la capacidad de Hot Module Replacement (HMR), puedes usar lo siguiente:
+if (module.hot) {
+  module.hot.accept('./App', () => {
+    renderApp();
+  });
+}
