@@ -1,0 +1,16 @@
+{
+    "games": [
+      {
+        "id": 1,
+        "title": "Juego 1",
+        "description": "Descripción del juego 1"
+      },
+      {
+        "id": 2,
+        "title": "Juego 2",
+        "description": "Descripción del juego 2"
+      }
+      
+    ]
+  }
+  

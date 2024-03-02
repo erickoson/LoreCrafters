@@ -19,5 +19,3 @@ const GameList = ({ games }) => {
 };
 
 export default GameList;
-
-
